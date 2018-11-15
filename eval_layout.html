@@ -7,14 +7,94 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
+		<style type="text/css">
+
+			.txtcenter {
+				text-align: center;
+			}
+			.container {
+				width : 100%;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.image{
+				margin-top: 1%;
+			}
+			img{
+				width: 100%;
+			}
+			.desktopG , .tablette , .desktop {
+				display: none;
+			}
+
+			@media screen and (min-width: 769px) {
+				.telephone {
+					display: none;
+				}
+				.tablette {
+					display: block;
+				}
+				.image 
+				{
+					max-width: 49%;
+					margin-right: 1%;
+				}    				
+			}
+
+			@media screen and (min-width: 970px) {
+				body {
+					margin : 0 10%;
+				}
+				.tablette {
+					display: none;
+				}
+				.desktop {
+					display: block;
+				}
+				.image 
+				{
+					max-width: 49%;
+				}
+				.container{
+					justify-content: center;
+				}    				
+			}
+
+			@media screen and (min-width: 1370px) {
+				.desktop {
+					display: none;
+				}
+				.desktopG {
+					display: block;
+				}
+				.image 
+				{
+					width: 24%;
+				}    				
+			}
+		</style>
 	</head>
 	<body>
 		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
+		<h2 class="desktopG txtcenter">Vue Desktop 1370px</h2>
 		<h2 class="desktop txtcenter">Vue Desktop</h2>
 		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
 		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+
+		<div class="container">
+			<div class="image">
+				<img src="img/mer.jpg" alt="mer"/>
+			</div>
+			<div class="image">
+				<img src="img/lac.jpg" alt="lac"/>
+			</div>
+			<div class="image">
+				<img src="img/montagne.jpg" alt="montagne"/>
+		    </div>
+			<div class="image">
+				<img src="img/foret.jpg" alt="forêt"/>
+			</div>
+		</div>
 
 
 
